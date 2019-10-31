@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:bai2"
+             x:Class="bai2.MainPage">
+    <ContentPage.Content>
+        <ListView x:Name="lshoa" HasUnevenRows="True" GroupDisplayBinding="{Binding TenLoai}"
+                  GroupShortNameBinding="{Binding TenLoai}" IsGroupingEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell ImageSource="{Binding Hinh}" Text = "{Binding TenHoa}"  Detail="{Binding MoTa}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+
+</ContentPage>
